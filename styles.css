@@ -263,6 +263,75 @@ body {
     }
 }
 
+@keyframes thirdPlanetRender {
+
+    0% {
+        background: linear-gradient(-90deg, rgb(255, 66, 113) 50%, rgb(168, 47, 77) 50%);
+    }
+
+    49% {
+        background: linear-gradient(-90deg, rgb(255, 66, 113) 50%, rgb(168, 47, 77) 50%);
+    }
+
+    49.1% {
+        background: linear-gradient(90deg, rgb(255, 66, 113) 50%, rgb(168, 47, 77) 50%);
+    }
+
+    99% {
+        background: linear-gradient(90deg, rgb(255, 66, 113) 50%, rgb(168, 47, 77) 50%);
+    }
+
+    99.1% {
+         background: linear-gradient(-90deg, rgb(255, 66, 113) 50%, rgb(168, 47, 77) 50%);
+    }
+
+    100% {
+        background: linear-gradient(-90deg, rgb(255, 66, 113) 50%, rgb(168, 47, 77) 50%);
+    }
+}
+
+@keyframes thirdPlanetRenderRotater {
+    0% {
+        transform: scaleX(1);
+        background-color: rgb(168, 47, 77);
+    }
+
+    25% {
+        transform: scaleX(0);
+        background-color: rgb(168, 47, 77);
+    }
+
+    25.1% {
+        transform: scaleX(0);
+        background-color: rgb(255, 66, 113);
+     }
+    
+    49% {
+        transform: scaleX(-1);
+        background-color: rgb(255, 66, 113);
+    }
+
+    49.1% {
+        transform: scaleX(1);
+        background-color: rgb(255, 66, 113);
+    }
+
+    75% {
+        transform: scaleX(0);
+        background-color: rgb(255, 66, 113);
+    }
+
+    75.1% {
+      transform: scaleX(0);
+       background-color: rgb(168, 47, 77);
+    }
+
+    100% {
+        transform: scaleX(1);
+         background-color: rgb(168, 47, 77);
+    }
+}
+
 @keyframes rotate {
     0% {
         transform: rotateZ(0deg);
