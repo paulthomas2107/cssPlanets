@@ -33,9 +33,20 @@ body {
     transform: scaleX(0.2);
 }
 
-#first-planet {
-    background-color: blue;
+.planet:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+}
 
+#first-planet {
+    /*background-color: rgb(86, 86, 253); */
+    animation: firstPlanetRender 12s infinite linear;
+ }
+
+#first-planet:after {
+    animation: firstPlanetRenderRotater 12s infinite linear;
 }
 
 #second-planet {
@@ -87,6 +98,80 @@ body {
     animation: hideThirdPlanet 12s infinite;
 }
 
+
+@keyframes firstPlanetRender {
+    0% {
+        background: linear-gradient(-90deg, rgb(86, 86, 253) 50%, rgb(60, 60, 175) 50%);
+    }
+
+    12% {
+        background: linear-gradient(-90deg, rgb(86, 86, 253) 50%, rgb(60, 60, 175) 50%);
+    }
+
+    12.1% {
+       background: linear-gradient(90deg, rgb(86, 86, 253) 50%, rgb(60, 60, 175) 50%);
+    }
+
+    62% {   
+        background: linear-gradient(90deg, rgb(86, 86, 253) 50%, rgb(60, 60, 175) 50%);
+    }   
+
+    62.1% {
+         background: linear-gradient(-  90deg, rgb(86, 86, 253) 50%, rgb(60, 60, 175) 50%);
+    }
+
+    100% {
+        background: linear-gradient(-90deg, rgb(86, 86, 253) 50%, rgb(60, 60, 175) 50%);
+    }
+}
+
+@keyframes firstPlanetRenderRotater {
+    0% {
+        transform: scaleX(-0.2);
+        background-color: rgb(86, 86, 253);
+    }
+    12% {
+        transform: scaleX(-1);
+        background-color: rgb(86, 86, 253);
+     }
+    12.1% {
+        transform: scaleX(1);
+        background-color: rgb(86, 86, 253);
+    }
+    37% {
+        transform: scaleX(0);
+         background-color: rgb(86, 86, 253);
+    }
+
+    37.1% {
+        transform: scaleX(0);
+        background-color: rgb(60, 60, 175);
+    }
+
+    62% {
+        transform: scaleX(-1);
+        background-color: rgb(60, 60, 175);
+     }
+    62.1% {
+        transform: scaleX(1);
+        background-color: rgb(60, 60, 175);
+    }
+
+    87% {
+        transform: scaleX(0);
+        background-color: rgb(60, 60, 175);
+    }
+
+    87.1% {
+        transform: scaleX(0);
+        background-color: rgb(86, 86, 253);
+    }
+
+    100% {
+        transform: scaleX(-0.2);
+        background-color: rgb(86, 86, 253);
+    }
+}
 
 @keyframes rotate {
     0% {
